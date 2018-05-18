@@ -19,6 +19,7 @@ import java.io.OutputStreamWriter;
  * 
  */
 public class ServleRequestUtil {
+/*
 
 	private static Logger logger = LoggerFactory.getLogger(ServleRequestUtil.class);
 
@@ -60,12 +61,14 @@ public class ServleRequestUtil {
 		return null;
 	}
 
-	/**
+	*/
+/**
 	 * 直接发送消息对象
 	 *
 	 * @param rsp
 	 * @param msgOut 待发送的消息对象
-	 */
+	 *//*
+
 	public static void send(HttpServletResponse rsp, String msgOut) {
 
 		logger.info("回应客户端,参数：{}", msgOut);
@@ -93,5 +96,6 @@ public class ServleRequestUtil {
 			}
 		}
 	}
+*/
 
 }

@@ -1,6 +1,6 @@
 package com.withmes.plan.config.base.utils;
 
-import org.apache.commons.text.StringEscapeUtils;
+import org.apache.commons.lang3.StringEscapeUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -52,7 +52,7 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
 	 * @param length 截取长度
 	 * @return
 	 */
-	public static String abbr(String str, int length) {
+/*	public static String abbr(String str, int length) {
 		if (str == null) {
 			return "";
 		}
@@ -73,7 +73,7 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
 			logger.error("缩略字符串异常",e);
 		}
 		return "";
-	}
+	}*/
 
 	/**
 	 * 缩略字符串（替换html）
@@ -81,9 +81,9 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
 	 * @param length 截取长度
 	 * @return
 	 */
-	public static String rabbr(String str, int length) {
+/*	public static String rabbr(String str, int length) {
         return abbr(replaceHtml(str), length);
-	}
+	}*/
 
 
 	/**

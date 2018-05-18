@@ -1,13 +1,9 @@
 package com.withmes.plan.config.base.utils.http;
 
-import com.cool.base.common.utils.mapper.JsonMapper;
-import org.apache.commons.httpclient.Header;
-import org.apache.commons.httpclient.HttpMethod;
-import org.apache.commons.httpclient.methods.DeleteMethod;
-import org.apache.commons.httpclient.methods.EntityEnclosingMethod;
-import org.apache.commons.httpclient.methods.GetMethod;
-import org.apache.commons.httpclient.methods.PostMethod;
-import org.apache.commons.httpclient.methods.PutMethod;
+
+import com.withmes.plan.config.base.utils.mapper.JsonMapper;
+import org.hibernate.validator.internal.util.privilegedactions.GetMethod;
+import org.springframework.http.HttpMethod;
 
 /**
  * 
@@ -23,11 +19,13 @@ import org.apache.commons.httpclient.methods.PutMethod;
  */
 public class HttpMethodFactory {
 
+/*
 	public static HttpMethod createMethod(String url, HttpType type, String contentType) {
 		return createMethod(url, null, type, contentType);
 	}
+*/
 
-	public static HttpMethod createMethod(String url, Object arg, HttpType type, String contentType) {
+/*	public static HttpMethod createMethod(String url, Object arg, HttpType type, String contentType) {
 		HttpMethod hm = null;
 		switch (type) {
 			case PUT:
@@ -59,5 +57,5 @@ public class HttpMethodFactory {
 			eem.setRequestBody(json);
 		}
 		return hm;
-	}
+	}*/
 }

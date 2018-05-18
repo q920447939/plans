@@ -1,6 +1,5 @@
 package com.withmes.plan.config.base.utils;
 
-import com.cool.base.common.constant.SessionConstant;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.Validate;
 import org.slf4j.Logger;
@@ -66,7 +65,7 @@ public class EncryptionUtils {
 	 * @param data
 	 * @return
 	 */
-	public static String base64Encode(String data){
+/*	public static String base64Encode(String data){
 		if(StringUtils.isEmpty(data)){
 			return "";
 		}
@@ -76,13 +75,13 @@ public class EncryptionUtils {
 			logger.error("BASE64编码异常", e);
 		}
 		return "";
-	}
+	}*/
 	/**
 	 * DESC: BASE64解码
 	 * @param data
 	 * @return
 	 */
-	public static String base64Decode(String data){
+/*	public static String base64Decode(String data){
 		if(StringUtils.isEmpty(data)){
 			return "";
 		}
@@ -92,7 +91,7 @@ public class EncryptionUtils {
 			logger.error("BASE64解码异常", e);
 		}
 		return "";
-	}
+	}*/
 	
 	
 	/**

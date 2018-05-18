@@ -1,9 +1,10 @@
 package com.withmes.plan.config.base.utils;
 
-import javassist.CtClass;
-import javassist.CtConstructor;
-import javassist.CtMethod;
-import javassist.NotFoundException;
+
+import org.apache.ibatis.javassist.CtClass;
+import org.apache.ibatis.javassist.CtConstructor;
+import org.apache.ibatis.javassist.CtMethod;
+import org.apache.ibatis.javassist.NotFoundException;
 import org.springframework.core.annotation.AnnotationUtils;
 
 import java.lang.annotation.Annotation;
@@ -437,6 +438,7 @@ public final class ReflectUtils {
 	 * @return desc.
 	 * @throws NotFoundException 
 	 */
+/*
 	public static String getDesc(final CtClass c) throws NotFoundException {
 		StringBuilder ret = new StringBuilder();
 		if (c.isArray()) {
@@ -470,6 +472,7 @@ public final class ReflectUtils {
 		}
 		return ret.toString();
 	}
+*/
 
 	/**
 	 * get method desc.
@@ -478,6 +481,7 @@ public final class ReflectUtils {
 	 * @param m method.
 	 * @return desc.
 	 */
+/*
 	public static String getDesc(final CtMethod m) throws NotFoundException {
 		StringBuilder ret = new StringBuilder(m.getName()).append('(');
 		CtClass[] parameterTypes = m.getParameterTypes();
@@ -487,6 +491,7 @@ public final class ReflectUtils {
 		ret.append(')').append(getDesc(m.getReturnType()));
 		return ret.toString();
 	}
+*/
 
 	/**
 	 * get constructor desc.
@@ -495,7 +500,7 @@ public final class ReflectUtils {
 	 * @param c constructor.
 	 * @return desc
 	 */
-	public static String getDesc(final CtConstructor c) throws NotFoundException {
+/*	public static String getDesc(final CtConstructor c) throws NotFoundException {
 		StringBuilder ret = new StringBuilder("(");
 		CtClass[] parameterTypes = c.getParameterTypes();
 		for (int i = 0; i < parameterTypes.length; i++) {
@@ -503,7 +508,7 @@ public final class ReflectUtils {
 		}
 		ret.append(')').append('V');
 		return ret.toString();
-	}
+	}*/
 
 	/**
 	 * get method desc.
@@ -530,7 +535,7 @@ public final class ReflectUtils {
 	 * @param m method.
 	 * @return desc.
 	 */
-	public static String getDescWithoutMethodName(final CtMethod m) throws NotFoundException {
+/*	public static String getDescWithoutMethodName(final CtMethod m) throws NotFoundException {
 		StringBuilder ret = new StringBuilder();
 		ret.append('(');
 		CtClass[] parameterTypes = m.getParameterTypes();
@@ -539,7 +544,7 @@ public final class ReflectUtils {
 		}
 		ret.append(')').append(getDesc(m.getReturnType()));
 		return ret.toString();
-	}
+	}*/
 
 	/**
 	 * name to desc.

@@ -99,14 +99,14 @@ public class ResponseData<T> implements Serializable {
 	 * @author guocp
 	 * @date 2017年11月8日
 	 */
-	public <E> ResponseData<E> map(Class<E> destinationClass) {
+/*	public <E> ResponseData<E> map(Class<E> destinationClass) {
 		ResponseData<E> response = new ResponseData<E>();
 		response.setCode(code);
 		response.setMessage(message);
 		response.setData(BeanMapper.map(this.data, destinationClass));
 		return response;
 	}
-	
+	*/
 	/**
 	 * 判断是否成功
 	 * @return   

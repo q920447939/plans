@@ -1,10 +1,5 @@
 package com.withmes.plan.config.base.utils.http;
 
-import com.cool.base.common.utils.StringUtils;
-import com.honzel.core.util.BeanHelper;
-import com.honzel.core.util.ResolverUtils;
-import com.honzel.core.util.resolver.Resolver;
-import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -63,7 +58,7 @@ public class WebUtils {
     private static final int CONNECT_TIMEOUT = 10000;
     private static final int READ_TIMEOUT = 60000;
 
-    private static class DefaultTrustManager implements X509TrustManager {
+  /*  private static class DefaultTrustManager implements X509TrustManager {
         public X509Certificate[] getAcceptedIssuers() {
             return null;
         }
@@ -91,10 +86,10 @@ public class WebUtils {
 
     private WebUtils() {
     }
-    /**
+    *//**
      * 是否启用Cookie管理
      * @param enabled
-     */
+     *//*
     public static void setCookieEnabled(boolean enabled) {
         CookieHandler defaultManager = CookieManager.getDefault();
         if (enabled) {
@@ -110,28 +105,28 @@ public class WebUtils {
         }
     }
 
-    /**
+    *//**
      * 获取Cookie管理器
      * @return
-     */
+     *//*
     public static CookieHandler getCookieHandler() {
         return CookieManager.getDefault();
     }
 
 
 
-    /**
+    *//**
      * 执行HTTP POST请求。
      *
      * @param url 请求地址
      * @param textParams 请求参数
      * @return 响应字符串
      * @throws IOException
-     */
+     *//*
     public static String doPost(String url, Map<String, Object> textParams) throws IOException {
         return doPost(url, textParams, CHARSET_UTF8, null);
     }
-    /**
+    *//**
      * 执行HTTP POST请求。
      *
      * @param url 请求地址
@@ -140,13 +135,13 @@ public class WebUtils {
      * @param headerMap 请求头属性设置
      * @return 响应字符串
      * @throws IOException
-     */
+     *//*
     public static String doPost(String url, Map<String, Object> textParams, Charset charset, Map<String, String> headerMap) throws IOException {
         return doPost(url, textParams, charset, CONNECT_TIMEOUT, READ_TIMEOUT, headerMap);
     }
 
 
-    /**
+    *//**
      * 执行HTTP POST请求。
      *
      * @param url 请求地址
@@ -157,7 +152,7 @@ public class WebUtils {
      * @param headerMap 请求头属性设置
      * @return 响应字符串
      * @throws IOException
-     */
+     *//*
     public static String doPost(String url, Map<String, Object> textParams, Charset charset, int connectTimeout, int readTimeout, Map<String, String> headerMap) throws IOException {
         if (charset == null) {
             charset = CHARSET_UTF8;
@@ -165,7 +160,7 @@ public class WebUtils {
         return doPost(url, buildQuery(textParams, charset), charset, connectTimeout, readTimeout, headerMap);
     }
 
-    /**
+    *//**
      * 执行HTTP POST请求。
      *
      * @param url 请求地址
@@ -176,7 +171,7 @@ public class WebUtils {
      * @param headerMap 请求头属性设置
      * @return 响应字符串
      * @throws IOException
-     */
+     *//*
     public static String doPost(String url, String content, Charset charset, int connectTimeout, int readTimeout, Map<String, String> headerMap) throws IOException {
         if (charset == null) {
             charset = CHARSET_UTF8;
@@ -185,7 +180,7 @@ public class WebUtils {
         HttpURLConnection conn = getConnection(url, METHOD_POST, cType, connectTimeout, readTimeout, headerMap);
         return doRequest(conn, content, charset);
     }
-    /**
+    *//**
      * 执行HTTP POST请求。
      *
      * @param url 请求地址
@@ -193,30 +188,30 @@ public class WebUtils {
      * @param headerMap 请求头属性设置
      * @return 响应字符串
      * @throws IOException
-     */
+     *//*
     public static String doPost(String url, String content, Map<String, String> headerMap) throws IOException {
         return doPost(url, content, CHARSET_UTF8, CONNECT_TIMEOUT, READ_TIMEOUT, headerMap);
     }
-    /**
+    *//**
      * 执行HTTP POST请求。
      *
      * @param url 请求地址
      * @param content 请求内容
      * @return 响应字符串
      * @throws IOException
-     */
+     *//*
     public static String doPost(String url, String content) throws IOException {
         return doPost(url, content, null);
     }
 
-    /**
+    *//**
      * 执行HTTP请求。
      * @param conn 请求连接
      * @param content 请求内容
      * @param charset 请求字符集
      * @return
      * @throws IOException
-     */
+     *//*
     public static String doRequest(HttpURLConnection conn, String content, Charset charset) throws IOException {
         if (conn == null) {
             throw new IOException("connection is null");
@@ -233,18 +228,18 @@ public class WebUtils {
             conn.disconnect();
         }
     }
-    /**
+    *//**
      * 执行HTTP请求。
      * @param conn 请求连接
      * @param content 请求内容
      * @return
      * @throws IOException
-     */
+     *//*
     public static String doRequest(HttpURLConnection conn, String content) throws IOException {
         return doRequest(conn, content, null);
     }
 
-    /**
+    *//**
      * 执行带文件上传的HTTP POST请求。
      *
      * @param url 请求地址
@@ -252,11 +247,11 @@ public class WebUtils {
      * @param fileParams 文件请求参数
      * @return 响应字符串
      * @throws IOException
-     */
+     *//*
     public static String doPost(String url, Map<String, Object> textParams,  Map<String, FileItem> fileParams) throws IOException {
         return doPost(url, textParams, fileParams, null);
     }
-    /**
+    *//**
      * 执行带文件上传的HTTP POST请求。
      *
      * @param url 请求地址
@@ -265,7 +260,7 @@ public class WebUtils {
      * @param headerMap
      * @return 响应字符串
      * @throws IOException
-     */
+     *//*
     public static String doPost(String url, Map<String, Object> textParams, Map<String, FileItem> fileParams, Map<String, String> headerMap) throws IOException {
         if (fileParams == null || fileParams.isEmpty()) {
             return doPost(url, textParams, CHARSET_UTF8, CONNECT_TIMEOUT, READ_TIMEOUT, headerMap);
@@ -274,7 +269,7 @@ public class WebUtils {
         }
     }
 
-    /**
+    *//**
      * 执行带文件上传的HTTP POST请求。
      *
      * @param url 请求地址
@@ -286,7 +281,7 @@ public class WebUtils {
      * @param headerMap
      * @return 响应字符串
      * @throws IOException
-     */
+     *//*
     public static String doPost(String url, Map<String, Object> textParams, Map<String, FileItem> fileParams, Charset charset, int connectTimeout, int readTimeout, Map<String, String> headerMap)
             throws IOException {
         if (fileParams == null || fileParams.isEmpty()) {
@@ -354,29 +349,29 @@ public class WebUtils {
         return entry.toString().getBytes(charset);
     }
 
-    /**
+    *//**
      * 执行HTTP GET请求。
      *
      * @param url 请求地址
      * @param textParams 请求参数
      * @return 响应字符串
      * @throws IOException
-     */
+     *//*
     public static String doGet(String url, Map<String, Object> textParams) throws IOException {
         return doGet(url, textParams, CHARSET_UTF8);
     }
-    /**
+    *//**
      * 执行HTTP GET请求。
      *
      * @param url 请求地址
      * @return 响应字符串
      * @throws IOException
-     */
+     *//*
     public static String doGet(String url) throws IOException {
         return doGet(url, (String) null);
     }
 
-    /**
+    *//**
      * 执行HTTP GET请求。
      *
      * @param url 请求地址
@@ -384,7 +379,7 @@ public class WebUtils {
      * @param charset 字符集，如UTF-8, GBK, GB2312
      * @return 响应字符串
      * @throws IOException
-     */
+     *//*
     public static String doGet(String url, Map<String, Object> textParams, Charset charset) throws IOException {
         if (charset == null) {
             charset = CHARSET_UTF8;
@@ -392,7 +387,7 @@ public class WebUtils {
         return doGet(url, buildQuery(textParams, charset), charset, CONNECT_TIMEOUT, READ_TIMEOUT, null);
     }
 
-    /**
+    *//**
      * 执行HTTP GET请求。
      *
      * @param url 请求地址
@@ -400,14 +395,14 @@ public class WebUtils {
      * @param headerMap
      * @return 响应字符串
      * @throws IOException
-     */
+     *//*
     public static String doGet(String url, String params, Map<String, String> headerMap) throws IOException {
         String ctype = "application/x-www-form-urlencoded;charset=" + CHARSET_UTF8;
         HttpURLConnection conn = getConnection(buildGetUrl(url, params), METHOD_GET, ctype, CONNECT_TIMEOUT, READ_TIMEOUT, headerMap);
         return doRequest(conn, null, CHARSET_UTF8);
     }
 
-    /**
+    *//**
      * 执行HTTP GET请求。
      *
      * @param url 请求地址
@@ -418,7 +413,7 @@ public class WebUtils {
      * @param headerMap
      * @return 响应字符串
      * @throws IOException
-     */
+     *//*
     public static String doGet(String url, String params, Charset charset, int connectTimeout, int readTimeout, Map<String, String> headerMap) throws IOException {
         if (charset == null) {
             charset = CHARSET_UTF8;
@@ -428,19 +423,19 @@ public class WebUtils {
         return doRequest(conn, null, charset);
     }
 
-    /**
+    *//**
      * 执行HTTP GET请求。
      *
      * @param url 请求地址
      * @param params 请求参数
      * @return 响应字符串
      * @throws IOException
-     */
+     *//*
     public static String doGet(String url, String params) throws IOException {
         return doGet(url, params, null);
     }
 
-    /**
+    *//**
      * 获取连接
      * @param url
      * @param method
@@ -449,7 +444,7 @@ public class WebUtils {
      * @param readTimeout
      * @param headerMap
      * @return
-     */
+     *//*
     public static HttpURLConnection getConnection(String url, String method, String ctype, int connectTimeout, int readTimeout, Map<String, String> headerMap) {
         HttpURLConnection conn = null;
         try {
@@ -488,25 +483,25 @@ public class WebUtils {
         return conn;
     }
 
-    /**
+    *//**
      * 获取连接
      * @param url
      * @param method
      * @param ctype
      * @return
-     */
+     *//*
     public static HttpURLConnection getConnection(String url, String method, String ctype) {
         return getConnection(url, method, ctype, null);
     }
 
-    /**
+    *//**
      * 获取连接
      * @param url
      * @param method
      * @param ctype
      * @param headerMap
      * @return
-     */
+     *//*
     public static HttpURLConnection getConnection(String url, String method, String ctype, Map<String, String> headerMap) {
         return getConnection(url, method, ctype, CONNECT_TIMEOUT, READ_TIMEOUT, headerMap);
     }
@@ -569,14 +564,14 @@ public class WebUtils {
         }
     }
 
-    /**
+    *//**
      * 获取数据流内容, 会关闭流
      * @param input
      * @param charset
      * @param contentEncoding
      * @return
      * @throws IOException
-     */
+     *//*
     public static String getStreamAsString(InputStream input, Charset charset, String contentEncoding) throws IOException {
         try {
             if (input == null) {
@@ -600,12 +595,12 @@ public class WebUtils {
             IOUtils.closeQuietly(input);
         }
     }
-    /**
+    *//**
      * 获取数据流内容, 会关闭流
      * @param input
      * @return
      * @throws IOException
-     */
+     *//*
     public static String getStreamAsString(InputStream input) throws IOException {
         return getStreamAsString(input, null, null);
     }
@@ -631,33 +626,33 @@ public class WebUtils {
         return charset;
     }
 
-    /**
+    *//**
      * 使用默认的UTF-8字符集反编码请求参数值。
      *
      * @param value 参数值
      * @return 反编码后的参数值
-     */
+     *//*
     public static String decode(String value) {
         return decode(value, CHARSET_UTF8);
     }
 
-    /**
+    *//**
      * 使用默认的UTF-8字符集编码请求参数值。
      *
      * @param value 参数值
      * @return 编码后的参数值
-     */
+     *//*
     public static String encode(String value) {
         return encode(value, CHARSET_UTF8);
     }
 
-    /**
+    *//**
      * 使用指定的字符集反编码请求参数值。
      *
      * @param value 参数值
      * @param charset 字符集
      * @return 反编码后的参数值
-     */
+     *//*
     public static String decode(String value, Charset charset) {
         if (!StringUtils.isEmpty(value) && charset != null) {
             try {
@@ -669,13 +664,13 @@ public class WebUtils {
         return value;
     }
 
-    /**
+    *//**
      * 使用指定的字符集编码请求参数值。
      *
      * @param value 参数值
      * @param charset 字符集
      * @return 编码后的参数值
-     */
+     *//*
     public static String encode(String value, Charset charset) {
         if (!StringUtils.isEmpty(value) && charset != null) {
             try {
@@ -731,12 +726,12 @@ public class WebUtils {
         sb.append(value).append("\">");
     }
 
-    /**
+    *//**
      * 获取文件的真实后缀名。目前只支持JPG, GIF, PNG, BMP四种图片文件。
      *
      * @param fileBytes 文件字节流
      * @return JPG, GIF, PNG or null
-     */
+     *//*
     public static String getFileSuffix(byte[] fileBytes) {
         if (fileBytes == null || fileBytes.length < 10) {
             return null;
@@ -754,12 +749,12 @@ public class WebUtils {
         }
     }
 
-    /**
+    *//**
      * 获取文件的真实媒体类型。目前只支持JPG, GIF, PNG, BMP四种图片文件。
      *
      * @param fileBytes 文件字节流
      * @return 媒体类型(MEME-TYPE)
-     */
+     *//*
     public static String getMimeType(byte[] fileBytes) {
         String suffix = getFileSuffix(fileBytes);
         String mimeType;
@@ -776,5 +771,5 @@ public class WebUtils {
         }
         return mimeType;
     }
-
+*/
 }

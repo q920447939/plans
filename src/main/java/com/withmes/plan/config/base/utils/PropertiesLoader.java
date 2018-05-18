@@ -1,6 +1,5 @@
 package com.withmes.plan.config.base.utils;
 
-import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.DefaultResourceLoader;
@@ -19,7 +18,7 @@ import java.util.Properties;
  */
 public class PropertiesLoader {
 
-	private static Logger logger = LoggerFactory.getLogger(PropertiesLoader.class);
+	/*private static Logger logger = LoggerFactory.getLogger(PropertiesLoader.class);
 
 	private static ResourceLoader resourceLoader = new DefaultResourceLoader();
 
@@ -33,9 +32,9 @@ public class PropertiesLoader {
 		return properties;
 	}
 
-	/**
+	*//**
 	 * 取出Property，但以System的Property优先,取不到返回空字符串.
-	 */
+	 *//*
 	private String getValue(String key) {
 		String systemProperty = System.getProperty(key);
 		if (systemProperty != null) {
@@ -47,9 +46,9 @@ public class PropertiesLoader {
 	    return "";
 	}
 
-	/**
+	*//**
 	 * 取出String类型的Property，但以System的Property优先,如果都为Null则抛出异常.
-	 */
+	 *//*
 	public String getProperty(String key) {
 		String value = getValue(key);
 		if (value == null) {
@@ -58,17 +57,17 @@ public class PropertiesLoader {
 		return value;
 	}
 
-	/**
+	*//**
 	 * 取出String类型的Property，但以System的Property优先.如果都为Null则返回Default值.
-	 */
+	 *//*
 	public String getProperty(String key, String defaultValue) {
 		String value = getValue(key);
 		return value != null ? value : defaultValue;
 	}
 
-	/**
+	*//**
 	 * 取出Integer类型的Property，但以System的Property优先.如果都为Null或内容错误则抛出异常.
-	 */
+	 *//*
 	public Integer getInteger(String key) {
 		String value = getValue(key);
 		if (value == null) {
@@ -77,17 +76,17 @@ public class PropertiesLoader {
 		return Integer.valueOf(value);
 	}
 
-	/**
+	*//**
 	 * 取出Integer类型的Property，但以System的Property优先.如果都为Null则返回Default值，如果内容错误则抛出异常
-	 */
+	 *//*
 	public Integer getInteger(String key, Integer defaultValue) {
 		String value = getValue(key);
 		return value != null ? Integer.valueOf(value) : defaultValue;
 	}
 
-	/**
+	*//**
 	 * 取出Double类型的Property，但以System的Property优先.如果都为Null或内容错误则抛出异常.
-	 */
+	 *//*
 	public Double getDouble(String key) {
 		String value = getValue(key);
 		if (value == null) {
@@ -96,17 +95,17 @@ public class PropertiesLoader {
 		return Double.valueOf(value);
 	}
 
-	/**
+	*//**
 	 * 取出Double类型的Property，但以System的Property优先.如果都为Null则返回Default值，如果内容错误则抛出异常
-	 */
+	 *//*
 	public Double getDouble(String key, Integer defaultValue) {
 		String value = getValue(key);
 		return value != null ? Double.valueOf(value) : defaultValue;
 	}
 
-	/**
+	*//**
 	 * 取出Boolean类型的Property，但以System的Property优先.如果都为Null抛出异常,如果内容不是true/false则返回false.
-	 */
+	 *//*
 	public Boolean getBoolean(String key) {
 		String value = getValue(key);
 		if (value == null) {
@@ -115,18 +114,18 @@ public class PropertiesLoader {
 		return Boolean.valueOf(value);
 	}
 
-	/**
+	*//**
 	 * 取出Boolean类型的Property，但以System的Property优先.如果都为Null则返回Default值,如果内容不为true/false则返回false.
-	 */
+	 *//*
 	public Boolean getBoolean(String key, boolean defaultValue) {
 		String value = getValue(key);
 		return value != null ? Boolean.valueOf(value) : defaultValue;
 	}
-
+*/
 	/**
 	 * 载入多个文件, 文件路径使用Spring Resource格式.
 	 */
-	private Properties loadProperties(String... resourcesPaths) {
+/*	private Properties loadProperties(String... resourcesPaths) {
 		Properties props = new Properties();
 
 		for (String location : resourcesPaths) {
@@ -145,5 +144,5 @@ public class PropertiesLoader {
 			}
 		}
 		return props;
-	}
+	}*/
 }

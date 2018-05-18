@@ -1,6 +1,5 @@
 package com.withmes.plan.config.base.utils.security;
 
-import com.cool.base.common.utils.Encodes;
 
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
@@ -23,7 +22,7 @@ public class DESUtils {
 	 * @param key 解密的key
 	 * @throws Exception.<br/>
 	 */
-	public static String decrypt(String content) throws Exception {
+/*	public static String decrypt(String content) throws Exception {
 		byte[] bytesrc = Encodes.decodeBase64(content);
 		Cipher cipher = Cipher.getInstance("DES/CBC/PKCS5Padding");
 		DESKeySpec desKeySpec = new DESKeySpec(DEFAULT_KEY.getBytes("UTF-8"));
@@ -33,15 +32,15 @@ public class DESUtils {
 		cipher.init(Cipher.DECRYPT_MODE, secretKey, iv);
 		byte[] retByte = cipher.doFinal(bytesrc);
 		return new String(retByte);
-	}
+	}*/
 	
 	/**
 	 * decrypt:【解密】. <br/>
 	 * @param content解密的内容
 	 * @param key 解密的key
-	 * @throws Exception.<br/>
+	 * @throws Exception.
 	 */
-	public static String decrypt(String content, String key) throws Exception {
+/*	public static String decrypt(String content, String key) throws Exception {
 		byte[] bytesrc = Encodes.decodeBase64(content);
 		Cipher cipher = Cipher.getInstance("DES/CBC/PKCS5Padding");
 		DESKeySpec desKeySpec = new DESKeySpec(key.getBytes("UTF-8"));
@@ -51,14 +50,14 @@ public class DESUtils {
 		cipher.init(Cipher.DECRYPT_MODE, secretKey, iv);
 		byte[] retByte = cipher.doFinal(bytesrc);
 		return new String(retByte);
-	}
+	}*/
 
 	/**
 	 * encrypt:【加密】. <br/>
 	 * @param content 加密的内容
 	 * @param key 加密key
 	 */
-	public static String encrypt(String content) throws Exception {
+/*	public static String encrypt(String content) throws Exception {
 		Cipher cipher = Cipher.getInstance("DES/CBC/PKCS5Padding");
 		DESKeySpec desKeySpec = new DESKeySpec(DEFAULT_KEY.getBytes("UTF-8"));
 		SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES");
@@ -67,14 +66,14 @@ public class DESUtils {
 		cipher.init(Cipher.ENCRYPT_MODE, secretKey, iv);
 		byte[] encryptbyte = cipher.doFinal(content.getBytes());
 		return new String(Encodes.encodeBase64(encryptbyte));
-	}
+	}*/
 
 	/**
 	 * encrypt:【加密】. <br/>
 	 * @param content 加密的内容
 	 * @param key 加密key
 	 */
-	public static String encrypt(String content, String key) throws Exception {
+/*	public static String encrypt(String content, String key) throws Exception {
 		Cipher cipher = Cipher.getInstance("DES/CBC/PKCS5Padding");
 		DESKeySpec desKeySpec = new DESKeySpec(key.getBytes("UTF-8"));
 		SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES");
@@ -84,5 +83,5 @@ public class DESUtils {
 		byte[] encryptbyte = cipher.doFinal(content.getBytes());
 		return new String(Encodes.encodeBase64(encryptbyte));
 	}
-	
+	*/
 }

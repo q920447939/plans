@@ -74,7 +74,7 @@ public abstract class BaseRestfulController {
 	 * @return 入参Bean
 	 * @author guocp
 	 */
-	public RequestParams convertParams(HttpServletRequest request){
+/*	public RequestParams convertParams(HttpServletRequest request){
 		Map<String, String[]> requestParameterMap = request.getParameterMap();
 		Map<String, String> paramters = Maps.newHashMap();
         for (Entry<String, String[]> e : requestParameterMap.entrySet()) {  
@@ -84,7 +84,7 @@ public abstract class BaseRestfulController {
         } 
 		paramters.put("ip", ServletUtils.getIpAddr(request));
         return BeanMapper.map(paramters, RequestParams.class);
-	}
+	}*/
 	
     /**
      * @Description: 获取请求header公共参数

@@ -70,12 +70,12 @@ public class FileItem {
 		return this.fileName;
 	}
 
-	public String getMimeType() throws IOException {
+/*	public String getMimeType() throws IOException {
 		if (this.mimeType == null) {
 			this.mimeType = WebUtils.getMimeType(getContent());
 		}
 		return this.mimeType;
-	}
+	}*/
 
 	public byte[] getContent() throws IOException {
 		if (this.content == null && this.file != null && this.file.exists()) {

@@ -1,10 +1,11 @@
 package com.withmes.plan.config.base.utils.http;
 
-import com.cool.base.common.utils.mapper.JsonMapper;
-import org.apache.commons.httpclient.HttpClient;
-import org.apache.commons.httpclient.HttpMethod;
+
+import com.withmes.plan.config.base.utils.mapper.JsonMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpMethod;
+import sun.net.www.http.HttpClient;
 
 /**
  * ClassName: HttpHandler 
@@ -19,7 +20,7 @@ import org.slf4j.LoggerFactory;
  */
 public class HttpHandler {
 	
-	public static Logger logger = LoggerFactory.getLogger(HttpHandler.class);
+	/*public static Logger logger = LoggerFactory.getLogger(HttpHandler.class);
 
 	private HttpClient httpClient;
 	
@@ -75,12 +76,12 @@ public class HttpHandler {
 		}
 	}
 	
-	/**
+	*//**
 	 * 请求处理
 	 * @return   
 	 * @author guocp
 	 * @date 2017年3月28日
-	 */
+	 *//*
 	public String processRequest(){
 		initHttpClient();
 		initHttpMethod();
@@ -91,16 +92,16 @@ public class HttpHandler {
 		return result;
 	}
 	
-	/**
+	*//**
 	 * 关闭连接  
-	 */
+	 *//*
 	private void closeConnection() {
 		this.httpClient.getHttpConnectionManager().closeIdleConnections(0);
 	}
 
-	/**
+	*//**
 	 * 初始化连接
-	 */
+	 *//*
 	private void initHttpClient(){
 		this.httpClient = new HttpClient();
 		this.httpClient.getParams().setContentCharset(this.encode);
@@ -113,9 +114,9 @@ public class HttpHandler {
 		this.httpMethod = HttpMethodFactory.createMethod(url, arg, type, contentType);
 	}
 	
-	/**
+	*//**
 	 * 处理请求
-	 */
+	 *//*
 	protected String processHandle(){
 		try {
 			int state = this.httpClient.executeMethod(this.httpMethod);
@@ -195,5 +196,5 @@ public class HttpHandler {
 
 	public void setContentType(String contentType) {
 		this.contentType = contentType;
-	}
+	}*/
 }
