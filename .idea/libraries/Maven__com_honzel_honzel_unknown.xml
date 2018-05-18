@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.honzel:honzel:unknown">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.m2/repository/com/honzel/honzel/unknown/honzel-unknown.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.m2/repository/com/honzel/honzel/unknown/honzel-unknown-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.m2/repository/com/honzel/honzel/unknown/honzel-unknown-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
