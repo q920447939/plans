@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.withmes.entity.plans.mapper.MeanRoleRelationMapper">
+<mapper namespace="com.withmes.plan.mapper.MeanRoleRelationMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.withmes.entity.plans.entity.MeanRoleRelation">
+    <resultMap id="BaseResultMap" type="com.withmes.plan.entity.MeanRoleRelation">
         <id column="id" property="id" />
         <result column="meanId" property="meanId" />
         <result column="roleId" property="roleId" />
@@ -14,4 +14,12 @@
  		meanId ,roleId ,id		
     </sql>
 
+    <sql id="Base_Table_Name">
+          Mean_Role_Relation
+    </sql>
+
+    <select id="findMeanRoleRelationAll"  resultType="com.withmes.plan.entity.MeanRoleRelation">
+        select  <include refid="Base_Column_List" ></include>
+        from  <include refid="Base_Table_Name" ></include>
+    </select>
 </mapper>

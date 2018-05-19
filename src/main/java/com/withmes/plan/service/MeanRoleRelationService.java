@@ -1,12 +1,18 @@
 package com.withmes.plan.service;
 
 
- /**
+import com.withmes.plan.config.base.service.BaseService;
+import com.withmes.plan.entity.MeanRoleRelation;
+
+
+/**
  * @Description: 菜单角色关联表
  服务类
  * @author liming
  * @date 2018-05-18
  */
-public interface MeanRoleRelationService {
+public interface MeanRoleRelationService extends BaseService<MeanRoleRelation> {
+
+  MeanRoleRelation findAllMeanRoleRelation ();
 
 }

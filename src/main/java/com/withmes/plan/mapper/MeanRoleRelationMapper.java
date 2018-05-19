@@ -1,7 +1,10 @@
 package com.withmes.plan.mapper;
 
 
+import com.withmes.plan.config.base.dal.BaseMapper;
 import com.withmes.plan.entity.MeanRoleRelation;
+
+import java.util.List;
 
 /**
  * @Description: 菜单角色关联表
@@ -9,6 +12,7 @@ import com.withmes.plan.entity.MeanRoleRelation;
  * @author liming
  * @date 2018-05-18
  */
-public interface MeanRoleRelationMapper  {
+public interface MeanRoleRelationMapper extends BaseMapper<MeanRoleRelation> {
 
+  List<MeanRoleRelation>  findMeanRoleRelationAll();
 }
