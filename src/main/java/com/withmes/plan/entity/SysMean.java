@@ -8,7 +8,7 @@ import java.io.Serializable;
 /**
  * @Description: 菜单表
  * @author liming
- * @date 2018-05-18
+ * @date 2018-05-19
  */
 @TableName("sys_mean")
 public class SysMean implements Serializable {

@@ -3,13 +3,10 @@ package com.withmes.plan.service.impl;
 import com.withmes.plan.config.base.dal.BaseMapper;
 import com.withmes.plan.config.base.service.BaseServiceImpl;
 import com.withmes.plan.entity.MeanRoleRelation;
-import com.withmes.plan.mapper.MeanRoleRelationMapper;
 import com.withmes.plan.service.MeanRoleRelationService;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.io.Serializable;
-import java.util.Collection;
 import java.util.List;
 
 /**
