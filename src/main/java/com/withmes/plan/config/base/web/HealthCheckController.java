@@ -1,6 +1,6 @@
 /** 
  *@Project: base-web 
- *@Author: guocp
+ *@Author: liming
  *@Date: 2017年1月7日 
  * 
  */    
@@ -17,7 +17,7 @@ import java.util.Map;
 /**
  * ClassName: HealthCheckController 
  * 服务监控检测页面
- * @author guocp
+ * @author liming
  * @date 2017年1月7日
  *
  * =================================================================================================

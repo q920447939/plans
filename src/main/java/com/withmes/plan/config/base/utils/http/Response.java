@@ -3,7 +3,7 @@ package com.withmes.plan.config.base.utils.http;
 /**
  * ClassName: Response 
  * @Description: http响应类
- * @author guocp
+ * @author liming
  * @date 2016年11月10日
  *
  * =================================================================================================

@@ -36,7 +36,7 @@ import java.util.zip.GZIPInputStream;
 
 /**
  * @Description: WEB Utils for request
-  * @author luhz@haokukeji.com
+  * @author liming@haokukeji.com
   * @date 2018/5/3
   *
   * =================================================================================================

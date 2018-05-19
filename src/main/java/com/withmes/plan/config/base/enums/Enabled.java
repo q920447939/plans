@@ -1,15 +1,11 @@
 package com.withmes.plan.config.base.enums;
 
 /**
- * 是否启用
- * ClassName: Enabled 
- * @author guocp
- * @date 2017年4月13日
- *
- * =================================================================================================
- *     Task ID			  Date			     Author		      Description
- * ----------------+----------------+-------------------+-------------------------------------------
- *
+ * @Description:是否启用
+ * @param:
+ * @return:
+ * @auther: liming
+ * @date: 2018/5/19 11:10
  */
 public enum Enabled implements BaseEnum<Enabled, Integer> {
 

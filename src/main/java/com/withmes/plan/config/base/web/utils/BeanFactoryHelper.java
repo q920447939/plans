@@ -1,6 +1,6 @@
 /** 
  *@Project: mcm-common 
- *@Author: guocp
+ *@Author: liming
  *@Date: 2016年12月15日 
  * 
  */    
@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * ClassName: BeanFactoryHelper 
- * @author guocp
+ * @author liming
  * @date 2016年12月15日
  *
  * =================================================================================================

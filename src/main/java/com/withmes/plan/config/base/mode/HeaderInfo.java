@@ -1,6 +1,6 @@
 /** 
  *@Project: mall-trade-core 
- *@Author: guocp
+ *@Author: liming
  *@Date: 2018年4月19日 
  *@Copyright: ©2014-2020 www.haokukeji.com Inc. All rights reserved. 
  */
@@ -9,11 +9,12 @@ package com.withmes.plan.config.base.mode;
 import java.io.Serializable;
 
 /**
- * @Description: HeaderInfo
- * @author guocp
- * @date 2018年4月19日
+ * @Description:HeaderInfo
+ * @param:
+ * @return:
+ * @auther: liming
+ * @date: 2018/5/19 11:11
  */
-
 public class HeaderInfo implements Serializable {
 
 	private static final long serialVersionUID = -1037723362471069471L;

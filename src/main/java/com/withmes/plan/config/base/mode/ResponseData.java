@@ -1,6 +1,6 @@
 /** 
  *@Project: base-common 
- *@Author: guocp
+ *@Author: liming
  *@Date: 2017年5月10日 
  * 
  */
@@ -10,23 +10,22 @@ package com.withmes.plan.config.base.mode;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.withmes.plan.config.base.enums.ResultCode;
 import com.withmes.plan.config.base.enums.ResultEnum;
-import com.withmes.plan.config.base.utils.mapper.BeanMapper;
 
 import java.io.Serializable;
 
 /**
- * ClassName: ResponseBody 
- * @Description: 客户端响应对象
- * @author guocp
- * @date 2017年3月21日
- *
- *	{
- *		data: {
- *			
- *		},
- *		code: Integer,
- *		message: ""
- *	}
+ * @Description: 客户端响应实体
+ *  *	{
+ *  *		data: {
+ *  *
+ *  *		},
+ *  *		code: Integer,
+ *  *		message: ""
+ *  *	}
+ * @param:
+ * @return:
+ * @auther: liming
+ * @date: 2018/5/19 11:12
  */
 public class ResponseData<T> implements Serializable {
 
@@ -96,7 +95,7 @@ public class ResponseData<T> implements Serializable {
 	 * @Description: ResponseData中Data对象转换
 	 * @param destinationClass
 	 * @return  
-	 * @author guocp
+	 * @author liming
 	 * @date 2017年11月8日
 	 */
 /*	public <E> ResponseData<E> map(Class<E> destinationClass) {
@@ -110,7 +109,7 @@ public class ResponseData<T> implements Serializable {
 	/**
 	 * 判断是否成功
 	 * @return   
-	 * @author guocp
+	 * @author liming
 	 * @date 2018年1月8日
 	 */
 	@JsonIgnore

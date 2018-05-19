@@ -10,7 +10,7 @@ import sun.net.www.http.HttpClient;
 /**
  * ClassName: HttpHandler 
  * @Description: HTTP请求处理类
- * @author guocp
+ * @author liming
  * @date 2016年11月10日
  *
  * =================================================================================================
@@ -79,7 +79,7 @@ public class HttpHandler {
 	*//**
 	 * 请求处理
 	 * @return   
-	 * @author guocp
+	 * @author liming
 	 * @date 2017年3月28日
 	 *//*
 	public String processRequest(){

@@ -14,7 +14,7 @@ import java.io.OutputStreamWriter;
 
 /**
  * @desc Servlet请求工具类
- * @author guocp
+ * @author liming
  * @date 2015年8月18日 下午6:13:43
  * 
  */

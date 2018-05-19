@@ -14,7 +14,7 @@ import java.util.List;
  * update*:修改<br/>
  * add*:添加<br/>
  * delete*:删除<br/>
- * @author guocp
+ * @author liming
  * @date 2018年3月20日
  *
  * =================================================================================================
@@ -33,7 +33,7 @@ public interface BaseService<T> {
 
 	/**
 	 * DESC: 根据ID修改实体
-	 * @author guocp
+	 * @author liming
 	 * @param entity
 	 * @return
 	 * @throws Exception
@@ -44,14 +44,14 @@ public interface BaseService<T> {
 	 * @Description: 更新全部字段
 	 * @param entity
 	 * @return   
-	 * @author guocp
+	 * @author liming
 	 * @date 2018年5月11日
 	 */
 	int updateAllColumn(T entity);
 
 	/**
 	 * DESC: 根据ID删除单个实体
-	 * @author guocp
+	 * @author liming
 	 * @param id
 	 * @return
 	 * @throws Exception
@@ -60,7 +60,7 @@ public interface BaseService<T> {
 
 	/**
 	 * DESC: 根据ID加载单个实体
-	 * @author guocp
+	 * @author liming
 	 * @param id
 	 * @return
 	 * @throws Exception
@@ -72,14 +72,14 @@ public interface BaseService<T> {
 	 * @param idList ID列表
 	 * @return
 	 * @throws Exception   
-	 * @author guocp
+	 * @author liming
 	 * @date 2017年12月12日
 	 */
 	List<T> findBatchIds(Collection<? extends Serializable> idList);
 
 	/**
 	 * DESC: 根据参数条件查询
-	 * @author guocp
+	 * @author liming
 	 * @param params
 	 * @return
 	 * @throws Exception
@@ -90,7 +90,7 @@ public interface BaseService<T> {
 	 * DESC: 根据条件查找对象列表
 	 * @param entity
 	 * @return   
-	 * @author guocp
+	 * @author liming
 	 * @date 2017年12月12日
 	 */
 	List<T> findByParams(Wrapper<T> wrapper);
@@ -99,7 +99,7 @@ public interface BaseService<T> {
 	 * @Description: 查询统计
 	 * @param entity
 	 * @return   
-	 * @author guocp
+	 * @author liming
 	 * @date 2017年12月12日
 	 */
 	Integer findCount(Wrapper<T> wrapper);

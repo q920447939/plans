@@ -1,8 +1,11 @@
 package com.withmes.plan.config.base.exception;
 
 /**
- * DESC: Manager层异常类
- * @DATE 2015年9月2日上午10:51:47
+ * @Description:Manager层异常类
+ * @param:
+ * @return:
+ * @auther: liming
+ * @date: 2018/5/19 11:11
  */
 public class ControllerException extends Exception {
 

@@ -1,15 +1,11 @@
 package com.withmes.plan.config.base.dal;
 
 /**
- * ClassName: IBaseMapper 
- * @Description: 基础mapper层接口
- * @author guocp
- * @date 2016年9月3日
- *
- * =================================================================================================
- *     Task ID			  Date			     Author		      Description
- * ----------------+----------------+-------------------+-------------------------------------------
- *
+ * @Description:基础mapper层接口
+ * @param:
+ * @return:
+ * @auther: liming
+ * @date: 2018/5/19 11:10
  */
 public interface BaseMapper<T> extends com.baomidou.mybatisplus.mapper.BaseMapper<T>{
 

@@ -1,7 +1,11 @@
 package com.withmes.plan.config.base.exception;
 
 /**
- * DESC: 参数验证层异常类
+ * @Description:参数验证层异常类
+ * @param:
+ * @return:
+ * @auther: liming
+ * @date: 2018/5/19 11:11
  */
 public class ValidateErrorException extends RuntimeException {
 

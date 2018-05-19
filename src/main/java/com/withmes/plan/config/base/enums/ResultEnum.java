@@ -2,16 +2,12 @@ package com.withmes.plan.config.base.enums;
 
 
 /**
- * ClassName: ResultEnum 
- * @author guocp
- * @date 2017年5月2日
- *
- * =================================================================================================
- *     Task ID			  Date			     Author		      Description
- * ----------------+----------------+-------------------+-------------------------------------------
- *
+ * @Description:
+ * @param:
+ * @return: 
+ * @auther: liming
+ * @date: 2018/5/19 11:13
  */
-
 public interface ResultEnum<T>{
 
 	T getCode();  

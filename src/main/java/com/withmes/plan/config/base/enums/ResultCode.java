@@ -1,18 +1,15 @@
 package com.withmes.plan.config.base.enums;
 
 /**
- * ClassName: ResultCode 
- * @Description 执行结果code枚举
-	  <p>0: 执行成功 ,
-	  <p>-1: 执行失败 ,
-	  <p>1000到1159之内为系统错误
-	  <p>1200以上为业务错误
- * @author guocp
- *
- * =================================================================================================
- *     Task ID			  Date			     Author		      Description
- * ----------------+----------------+-------------------+-------------------------------------------
- *
+ * @Description:@Description 执行结果code枚举
+ * 	  <p>0: 执行成功 ,
+ * 	  <p>-1: 执行失败 ,
+ * 	  <p>1000到1159之内为系统错误
+ * 	  <p>1200以上为业务错误
+ * @param:
+ * @return:
+ * @auther: liming
+ * @date: 2018/5/19 11:10
  */
 public enum ResultCode  implements ResultEnum<Integer>{
 	/**

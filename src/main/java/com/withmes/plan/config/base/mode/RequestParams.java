@@ -1,6 +1,6 @@
 /** 
  *@Project: base-web 
- *@Author: guocp
+ *@Author: liming
  *@Date: 2017年4月14日 
  * 
  */    
@@ -9,15 +9,11 @@ package com.withmes.plan.config.base.mode;
 import java.io.Serializable;
 
 /**
- * ClassName: RequestParams 
- * @Description: 通用参数bean
- * @author guocp
- * @date 2017年3月21日
- *
- * =================================================================================================
- *     Task ID			  Date			     Author		      Description
- * ----------------+----------------+-------------------+-------------------------------------------
- *
+ * @Description:通用参数bean
+ * @param:
+ * @return:
+ * @auther: liming
+ * @date: 2018/5/19 11:11
  */
 public class RequestParams implements Serializable{
 	

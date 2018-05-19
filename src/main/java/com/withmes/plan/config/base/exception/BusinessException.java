@@ -5,9 +5,11 @@ import com.withmes.plan.config.base.enums.ResultCode;
 import com.withmes.plan.config.base.enums.ResultEnum;
 
 /**
- * 业务异常
- * @author luhz@haokukeji.com
- *
+ * @Description:业务异常
+ * @param:
+ * @return:
+ * @auther: liming
+ * @date: 2018/5/19 11:11
  */
 @SuppressWarnings("serial")
 public class BusinessException extends RuntimeException {

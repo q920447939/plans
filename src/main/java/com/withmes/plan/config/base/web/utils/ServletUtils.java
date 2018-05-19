@@ -3,7 +3,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * 
- * $Id: ServletUtils.java 1493 2011-02-13 16:33:38Z calvinxiu $
+ * $Id: ServletUtils.java 1493 2011-02-13 16:33:38Z limingxiu $
  */
 package com.withmes.plan.config.base.web.utils;
 
@@ -22,7 +22,7 @@ import java.util.TreeMap;
 /**
  * Http与Servlet工具类.
  * 
- * @author calvin
+ * @author liming
  */
 @SuppressWarnings("rawtypes")
 public abstract class ServletUtils {

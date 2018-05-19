@@ -3,7 +3,7 @@ package com.withmes.plan.config.base.utils.http;
 /**
  * ClassName: HttpType 
  * @Description: HTTP请求类型
- * @author guocp
+ * @author liming
  * @date 2016年11月10日
  *
  * =================================================================================================

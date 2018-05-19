@@ -8,9 +8,11 @@ import com.fasterxml.jackson.databind.SerializerProvider;
 import java.io.IOException;
 
 /**
- * @author guocp
- * @desc 枚举序列化
- * @date 2015/7/21 17:53
+ * @Description:枚举序列化
+ * @param:
+ * @return:
+ * @auther: liming
+ * @date: 2018/5/19 11:10
  */
 public class BaseEnumSerializer extends JsonSerializer<BaseEnum> {
 

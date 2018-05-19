@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * DESC: Cookie 辅助类
- * @author guocp
+ * @author liming
  * @DATE 2015年7月22日上午10:01:40
  * @version 0.1.0
  */

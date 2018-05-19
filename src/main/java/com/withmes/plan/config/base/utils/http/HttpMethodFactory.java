@@ -9,7 +9,7 @@ import org.springframework.http.HttpMethod;
  * 
  * ClassName: HttpMethodFactory 
  * @Description: HTTP请求处理工厂
- * @author guocp
+ * @author liming
  * @date 2016年11月10日
  *
  * =================================================================================================
