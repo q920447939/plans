@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.withmes.plan.mapper.SysUserAnnexationMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.withmes.plan.entity.SysUserAnnexation">
+        <result column="id" property="id" />
+        <result column="userid" property="userid" />
+        <result column="user_portrait_address" property="userPortraitAddress" />
+        <result column="portrait_width" property="portraitWidth" />
+        <result column="prottait_height" property="prottaitHeight" />
+        <result column="email" property="email" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+ 		id ,userid ,user_portrait_address ,portrait_width ,prottait_height ,email		
+    </sql>
+
+</mapper>
