@@ -1,19 +1,19 @@
 package com.withmes.plan.entity;
 
+import java.io.Serializable;
+
 import com.baomidou.mybatisplus.enums.IdType;
 import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableId;
-import com.baomidou.mybatisplus.annotations.TableField;
-import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.activerecord.Model;
 import java.io.Serializable;
 
 /**
  * @Description: 用户表
  * @author liming
- * @date 2018-05-19
+ * @date 2018-05-22
  */
-@TableName("sys_user")
-public class SysUser implements Serializable {
+public class SysUser extends Model<SysUser> {
 
     private static final long serialVersionUID = 1L;
 
@@ -41,13 +41,11 @@ public class SysUser implements Serializable {
     /**
      * 创建时间
      */
-	@TableField("create_time")
 	private Date createTime;
 	
     /**
      * 更新时间
      */
-	@TableField("update_time")
 	private Date updateTime;
 	
     /**
@@ -68,7 +66,6 @@ public class SysUser implements Serializable {
     /**
      * 注册类型(0-手机注册,1-网页注册,2-后台注册)
      */
-	@TableField("register_type")
 	private String registerType;
 	
 
@@ -151,6 +148,31 @@ public class SysUser implements Serializable {
 
 	public void setRegisterType(String registerType) {
 		this.registerType = registerType;
+	}
+
+	public static final String ID = "id";
+
+	public static final String NAME = "name";
+
+	public static final String STATUS = "status";
+
+	public static final String SEX = "sex";
+
+	public static final String CREATE_TIME = "create_time";
+
+	public static final String UPDATE_TIME = "update_time";
+
+	public static final String ACCOUNT = "account";
+
+	public static final String PASSWORD = "password";
+
+	public static final String MOBILE = "mobile";
+
+	public static final String REGISTER_TYPE = "register_type";
+
+	@Override
+	protected Serializable pkVal() {
+		return this.id;
 	}
 
 	@Override

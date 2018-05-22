@@ -1,16 +1,16 @@
 package com.withmes.plan.entity;
 
-import com.baomidou.mybatisplus.annotations.TableField;
-import com.baomidou.mybatisplus.annotations.TableName;
+import java.io.Serializable;
+
+import com.baomidou.mybatisplus.activerecord.Model;
 import java.io.Serializable;
 
 /**
  * @Description: 用户附加信息表
  * @author liming
- * @date 2018-05-19
+ * @date 2018-05-22
  */
-@TableName("sys_user_annexation")
-public class SysUserAnnexation implements Serializable {
+public class SysUserAnnexation extends Model<SysUserAnnexation> {
 
     private static final long serialVersionUID = 1L;
 
@@ -24,19 +24,16 @@ public class SysUserAnnexation implements Serializable {
     /**
      * 用户头像存放地址
      */
-	@TableField("user_portrait_address")
 	private String userPortraitAddress;
 	
     /**
      * 头像宽度
      */
-	@TableField("portrait_width")
 	private Float portraitWidth;
 	
     /**
      * 头像高度
      */
-	@TableField("prottait_height")
 	private Float prottaitHeight;
 	
     /**
@@ -92,6 +89,23 @@ public class SysUserAnnexation implements Serializable {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public static final String ID = "id";
+
+	public static final String USERID = "userid";
+
+	public static final String USER_PORTRAIT_ADDRESS = "user_portrait_address";
+
+	public static final String PORTRAIT_WIDTH = "portrait_width";
+
+	public static final String PROTTAIT_HEIGHT = "prottait_height";
+
+	public static final String EMAIL = "email";
+
+	@Override
+	protected Serializable pkVal() {
+		return this.id;
 	}
 
 	@Override

@@ -1,19 +1,19 @@
 package com.withmes.plan.entity;
 
+import java.io.Serializable;
+
 import com.baomidou.mybatisplus.enums.IdType;
 import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableId;
-import com.baomidou.mybatisplus.annotations.TableField;
-import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.activerecord.Model;
 import java.io.Serializable;
 
 /**
  * @Description: 角色表
  * @author liming
- * @date 2018-05-19
+ * @date 2018-05-22
  */
-@TableName("sys_role")
-public class SysRole implements Serializable {
+public class SysRole extends Model<SysRole> {
 
     private static final long serialVersionUID = 1L;
 
@@ -26,25 +26,21 @@ public class SysRole implements Serializable {
     /**
      * 父级角色ID
      */
-	@TableField("parent_id")
 	private Integer parentId;
 	
     /**
      * 角色名称
      */
-	@TableField("role_name")
 	private String roleName;
 	
     /**
      * 创建时间
      */
-	@TableField("create_time")
 	private Date createTime;
 	
     /**
      * 更新时间
      */
-	@TableField("upate_time")
 	private Date upateTime;
 	
     /**
@@ -100,6 +96,23 @@ public class SysRole implements Serializable {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public static final String ID = "id";
+
+	public static final String PARENT_ID = "parent_id";
+
+	public static final String ROLE_NAME = "role_name";
+
+	public static final String CREATE_TIME = "create_time";
+
+	public static final String UPATE_TIME = "upate_time";
+
+	public static final String DESCRIPTION = "description";
+
+	@Override
+	protected Serializable pkVal() {
+		return this.id;
 	}
 
 	@Override

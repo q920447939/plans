@@ -1,17 +1,17 @@
 package com.withmes.plan.entity;
 
+import java.io.Serializable;
+
 import java.util.Date;
-import com.baomidou.mybatisplus.annotations.TableField;
-import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.activerecord.Model;
 import java.io.Serializable;
 
 /**
  * @Description: 菜单表
  * @author liming
- * @date 2018-05-19
+ * @date 2018-05-22
  */
-@TableName("sys_mean")
-public class SysMean implements Serializable {
+public class SysMean extends Model<SysMean> {
 
     private static final long serialVersionUID = 1L;
 
@@ -33,25 +33,21 @@ public class SysMean implements Serializable {
     /**
      * 地址描述
      */
-	@TableField("address_explain")
 	private String addressExplain;
 	
     /**
      * 父菜单ID
      */
-	@TableField("parent_id")
 	private Integer parentId;
 	
     /**
      * 创建时间
      */
-	@TableField("create_time")
 	private Date createTime;
 	
     /**
      * 更新时间
      */
-	@TableField("upate_time")
 	private Date upateTime;
 	
     /**
@@ -136,6 +132,29 @@ public class SysMean implements Serializable {
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+	public static final String ID = "id";
+
+	public static final String NAME = "name";
+
+	public static final String ADDRESS = "address";
+
+	public static final String ADDRESS_EXPLAIN = "address_explain";
+
+	public static final String PARENT_ID = "parent_id";
+
+	public static final String CREATE_TIME = "create_time";
+
+	public static final String UPATE_TIME = "upate_time";
+
+	public static final String DESCRIPTION = "description";
+
+	public static final String STATUS = "status";
+
+	@Override
+	protected Serializable pkVal() {
+		return this.id;
 	}
 
 	@Override

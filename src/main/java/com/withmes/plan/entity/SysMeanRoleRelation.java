@@ -1,27 +1,31 @@
 package com.withmes.plan.entity;
 
-import com.baomidou.mybatisplus.annotations.TableName;
+import java.io.Serializable;
+
+import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.activerecord.Model;
 import java.io.Serializable;
 
 /**
  * @Description: 菜单角色关联表
 
  * @author liming
- * @date 2018-05-19
+ * @date 2018-05-22
  */
-@TableName("sys_mean_role_relation")
-public class SysMeanRoleRelation implements Serializable {
+public class SysMeanRoleRelation extends Model<SysMeanRoleRelation> {
 
     private static final long serialVersionUID = 1L;
 
     /**
      * 菜单id
      */
+	@TableField("meanId")
 	private Integer meanId;
 	
     /**
      * 角色Id
      */
+	@TableField("roleId")
 	private Integer roleId;
 	
     /**
@@ -53,6 +57,17 @@ public class SysMeanRoleRelation implements Serializable {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	public static final String MEANID = "meanId";
+
+	public static final String ROLEID = "roleId";
+
+	public static final String ID = "id";
+
+	@Override
+	protected Serializable pkVal() {
+		return this.id;
 	}
 
 	@Override

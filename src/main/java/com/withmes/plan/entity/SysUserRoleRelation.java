@@ -1,26 +1,30 @@
 package com.withmes.plan.entity;
 
-import com.baomidou.mybatisplus.annotations.TableName;
+import java.io.Serializable;
+
+import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.activerecord.Model;
 import java.io.Serializable;
 
 /**
  * @Description: 用户角色关联表
  * @author liming
- * @date 2018-05-19
+ * @date 2018-05-22
  */
-@TableName("sys_user_role_relation")
-public class SysUserRoleRelation implements Serializable {
+public class SysUserRoleRelation extends Model<SysUserRoleRelation> {
 
     private static final long serialVersionUID = 1L;
 
     /**
      * 用户id
      */
+	@TableField("userId")
 	private Integer userId;
 	
     /**
      * 角色Id
      */
+	@TableField("roleId")
 	private Integer roleId;
 	
     /**
@@ -52,6 +56,17 @@ public class SysUserRoleRelation implements Serializable {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	public static final String USERID = "userId";
+
+	public static final String ROLEID = "roleId";
+
+	public static final String ID = "id";
+
+	@Override
+	protected Serializable pkVal() {
+		return this.id;
 	}
 
 	@Override
