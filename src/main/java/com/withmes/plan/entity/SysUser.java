@@ -1,19 +1,16 @@
 package com.withmes.plan.entity;
 
-import java.io.Serializable;
-
 import com.baomidou.mybatisplus.enums.IdType;
 import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableId;
-import com.baomidou.mybatisplus.activerecord.Model;
 import java.io.Serializable;
 
 /**
  * @Description: 用户表
  * @author liming
- * @date 2018-05-22
+ * @date 2018-05-23
  */
-public class SysUser extends Model<SysUser> {
+public class SysUser implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -26,7 +23,7 @@ public class SysUser extends Model<SysUser> {
     /**
      * 用户姓名
      */
-	private String name;
+	private String username;
 	
     /**
      * 状态(0-锁定,1-正常)
@@ -68,6 +65,8 @@ public class SysUser extends Model<SysUser> {
      */
 	private String registerType;
 	
+	private String nickname;
+	
 
 
 	public Integer getId() {
@@ -78,12 +77,12 @@ public class SysUser extends Model<SysUser> {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getStatus() {
@@ -150,9 +149,17 @@ public class SysUser extends Model<SysUser> {
 		this.registerType = registerType;
 	}
 
+	public String getNickname() {
+		return nickname;
+	}
+
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
+	}
+
 	public static final String ID = "id";
 
-	public static final String NAME = "name";
+	public static final String USERNAME = "username";
 
 	public static final String STATUS = "status";
 
@@ -170,16 +177,13 @@ public class SysUser extends Model<SysUser> {
 
 	public static final String REGISTER_TYPE = "register_type";
 
-	@Override
-	protected Serializable pkVal() {
-		return this.id;
-	}
+	public static final String NICKNAME = "nickname";
 
 	@Override
 	public String toString() {
 		return "SysUser{" +
 			", id=" + id +
-			", name=" + name +
+			", username=" + username +
 			", status=" + status +
 			", sex=" + sex +
 			", createTime=" + createTime +
@@ -188,6 +192,7 @@ public class SysUser extends Model<SysUser> {
 			", password=" + password +
 			", mobile=" + mobile +
 			", registerType=" + registerType +
+			", nickname=" + nickname +
 			"}";
 	}
 }
